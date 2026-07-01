@@ -1,5 +1,12 @@
-"use client";
+
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Website Design Team | E Charan Kumar Reddy & R Shakthi Prasad",
+    description: "Meet the developers behind the KADA GWRS portal: E Charan Kumar Reddy and R Shakthi Prasad from Kuppam Engineering College.",
+    keywords: ["E Charan Kumar Reddy", "R Shakthi Prasad", "Kuppam Engineering College", "KADA GWRS Developers", "Website Design Team"],
+};
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Code2, Palette, Database, Globe, Github, ExternalLink, Mail, GraduationCap, Users, Sparkles, Layers } from "lucide-react";
