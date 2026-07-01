@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["/images/banner.jpg"],
   },
   verification: {
-    google: "PLACEHOLDER_GOOGLE_SITE_VERIFICATION_ID", // Replace with actual GSC ID
+    google: "fMOtionmmpbeQQTZbWYWk6_fzHjET2ucJDs6g3-Rm2g",
   },
   icons: {
     icon: "/images/logo.png",
