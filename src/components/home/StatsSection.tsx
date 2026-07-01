@@ -61,15 +61,15 @@ export default function StatsSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.15, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                             viewport={{ once: true }}
-                            className="relative group bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 hover:border-blue-100 transition-colors overflow-hidden"
+                            className="relative group bg-white p-5 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 hover:border-blue-100 transition-colors overflow-hidden"
                         >
                             {/* Hover Gradient Background */}
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             
                             <div className="relative z-10 flex flex-col items-center text-center">
-                                <h3 className="text-5xl font-extrabold text-gray-900 mb-3 tracking-tighter flex items-center gap-1 group-hover:text-blue-600 transition-colors duration-500">
+                                <h3 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 tracking-tighter flex items-center gap-1 group-hover:text-blue-600 transition-colors duration-500">
                                     <Counter value={stat.value} />
-                                    <span className="text-3xl text-blue-500">{stat.suffix}</span>
+                                    <span className="text-2xl md:text-3xl text-blue-500">{stat.suffix}</span>
                                 </h3>
                                 <div className="h-0.5 w-12 bg-gray-200 group-hover:bg-blue-400 transition-colors duration-500 mb-4" />
                                 <p className="text-gray-500 font-medium tracking-wide text-sm uppercase group-hover:text-gray-900 transition-colors duration-500">

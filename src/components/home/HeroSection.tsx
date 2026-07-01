@@ -66,11 +66,13 @@ export default function HeroSection() {
                     </motion.div>
 
                     {/* Main Title Area */}
-                    <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-14 w-full">
+                    <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-14 w-full">
+                        {/* Desktop Left Logo */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                            className="hidden lg:block"
                         >
                             <Link href="/website-design-team" className="group flex flex-col items-center">
                                 <div className="p-1 rounded-full bg-gradient-to-tr from-blue-400 to-emerald-400 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all duration-500">
@@ -91,21 +93,23 @@ export default function HeroSection() {
                             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                             className="flex-1 max-w-3xl"
                         >
-                            <h1 className="text-5xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 leading-[1.1] tracking-tight mb-6 filter drop-shadow-lg">
+                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 leading-[1.1] tracking-tight mb-6 filter drop-shadow-lg">
                                 Groundwater Analysis <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-300">
                                     & Hydrology Observatory
                                 </span>
                             </h1>
-                            <p className="text-lg lg:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
+                            <p className="text-base md:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
                                 A scientific, spatial, and temporal analysis of groundwater levels, aquifer storage, surface water interaction, and recharge dynamics.
                             </p>
                         </motion.div>
 
+                        {/* Desktop Right Logo */}
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                            className="hidden lg:block"
                         >
                             <Link href="/website-design-team" className="group flex flex-col items-center">
                                 <div className="p-1 rounded-full bg-gradient-to-tl from-teal-400 to-blue-400 group-hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all duration-500">
@@ -119,6 +123,26 @@ export default function HeroSection() {
                                 <span className="mt-4 text-white/90 text-sm font-semibold tracking-wide uppercase">KEC Kuppam</span>
                             </Link>
                         </motion.div>
+
+                        {/* Mobile Logos (Visible only on small screens) */}
+                        <div className="flex lg:hidden flex-row gap-10 justify-center items-center w-full mt-4">
+                            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }}>
+                                <Link href="/website-design-team" className="group flex flex-col items-center">
+                                    <div className="p-1 rounded-full bg-gradient-to-tr from-blue-400 to-emerald-400">
+                                        <Image src="/images/about-kada/iit.jpg" alt="IIT Kanpur" width={80} height={80} unoptimized className="w-16 h-16 rounded-full border-2 border-white object-cover" />
+                                    </div>
+                                    <span className="mt-3 text-white/90 text-[11px] font-semibold tracking-wide uppercase">IIT Kanpur</span>
+                                </Link>
+                            </motion.div>
+                            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }}>
+                                <Link href="/website-design-team" className="group flex flex-col items-center">
+                                    <div className="p-1 rounded-full bg-gradient-to-tl from-teal-400 to-blue-400">
+                                        <Image src="/images/about-kada/kpm.jpg" alt="KEC" width={80} height={80} unoptimized className="w-16 h-16 rounded-full border-2 border-white object-cover" />
+                                    </div>
+                                    <span className="mt-3 text-white/90 text-[11px] font-semibold tracking-wide uppercase">KEC Kuppam</span>
+                                </Link>
+                            </motion.div>
+                        </div>
                     </div>
 
                     {/* Glassmorphism Indicators */}
@@ -126,12 +150,12 @@ export default function HeroSection() {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                        className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl mt-8"
+                        className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 w-full max-w-5xl mt-6 lg:mt-8"
                     >
                         {INDICATORS.map((indicator, idx) => (
                             <div
                                 key={indicator.label}
-                                className="relative group overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-6 hover:bg-white/20 transition-all duration-500 cursor-default"
+                                className="relative group overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 sm:p-5 lg:p-6 hover:bg-white/20 transition-all duration-500 cursor-default"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                 <div className="relative z-10 flex flex-col gap-4">

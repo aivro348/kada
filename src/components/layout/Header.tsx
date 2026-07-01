@@ -127,7 +127,7 @@ export default function Header() {
 
             <div className="w-full px-2 lg:px-6 py-3 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-4 shrink-0">
-                    <div className="relative h-12 w-12 lg:h-14 lg:w-14">
+                    <div className="relative h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14">
                         <Image
                             src="/images/logo.png"
                             alt="KADA-GWRS Logo"
@@ -137,10 +137,10 @@ export default function Header() {
                         />
                     </div>
                     <div className="flex flex-col">
-                        <h1 className="text-xl lg:text-3xl font-bold leading-none font-serif tracking-tight text-primary">
+                        <h1 className="text-lg md:text-xl lg:text-3xl font-bold leading-none font-serif tracking-tight text-primary">
                             KADA-GWRS
                         </h1>
-                        <p className="text-[9px] lg:text-[11px] text-secondary font-bold uppercase tracking-[0.25em] mt-1.5 opacity-90 whitespace-nowrap">
+                        <p className="text-[8px] md:text-[9px] lg:text-[11px] text-secondary font-bold uppercase tracking-[0.2em] mt-1 lg:mt-1.5 opacity-90 whitespace-nowrap">
                             Govt. of Andhra Pradesh
                         </p>
                     </div>
