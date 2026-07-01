@@ -1,50 +1,68 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://kada-gwrs.ap.gov.in';
-
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/overview/about-kada`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/groundwater/current-status`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/hydrology/surface`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/mi-tanks/inventory`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/water-balance/groundwater-balance`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/agriculture/well-inventory`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    }
+  const baseUrl = 'https://kadagwrs.vercel.app';
+  
+  const routes = [
+    '',
+    '/agriculture/well-status',
+    '/agriculture/cropping',
+    '/agriculture/groundwater-stress',
+    '/agriculture/well-characteristics',
+    '/agriculture/well-density',
+    '/agriculture/hnss-influence',
+    '/website-design-team',
+    '/water-balance/mi-tanks-energy',
+    '/water-balance/energy',
+    '/water-balance/availability',
+    '/water-balance/groundwater-balance',
+    '/water-balance/monthly-gwr',
+    '/hydrology/subsurface',
+    '/hydrology/zonation',
+    '/hydrology/surface',
+    '/hydrology/sink-analysis',
+    '/hydrology/indexing',
+    '/data-methods/methodology',
+    '/data-methods/assumptions',
+    '/data-methods/downloads',
+    '/resources/recharge',
+    '/resources/availability',
+    '/resources/extraction',
+    '/mi-tanks/hnss-linked',
+    '/mi-tanks/hnss-interventions',
+    '/mi-tanks/storage-status',
+    '/mi-tanks/inventory',
+    '/mi-tanks/storage-change',
+    '/aquifer/storage-estimation',
+    '/aquifer/parameters',
+    '/aquifer/sustainability',
+    '/aquifer/demarcation',
+    '/case-studies/cherlopalli',
+    '/conservation/maps-analysis',
+    '/conservation/water-conservation-plan',
+    '/conservation/village-level',
+    '/conservation/existing',
+    '/conservation/proposed',
+    '/overview/rainfall',
+    '/overview/about-kada',
+    '/overview/admin-profile',
+    '/groundwater/monsoonal-rise',
+    '/groundwater/seasonal-gis',
+    '/groundwater/piezometer-obs',
+    '/groundwater/real-time',
+    '/groundwater/current-status',
+    '/groundwater/seasonal-fluctuation',
+    '/groundwater/spatial-distribution',
+    '/groundwater/seasonal-gwis',
+    '/groundwater/gw-estimation',
+    '/groundwater/annual-trends',
+    '/groundwater/monsoon-power'
   ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: route === '' ? 1 : 0.8,
+  }));
 }
